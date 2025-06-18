@@ -88,14 +88,36 @@ browser-use
 
 # Browser Interface
 
-This project now includes a browser-based interface for interacting with the AI agent.
-To use it:
+This project now includes a browser-based interface for interacting with the AI agent, powered by a Python Flask backend with Socket.IO for real-time communication.
 
-1.  Ensure you have a modern web browser installed.
-2.  Navigate to the `browser_interface` directory within this project.
-3.  Open the `index.html` file in your web browser.
+## Prerequisites
 
-This will load the chat interface where you can send messages to the agent and see its responses, as well as a preview of browser automation tasks.
+1.  **Install Dependencies**: The interface requires `Flask` and `Flask-SocketIO`. If you've installed the project using `pip install .` or `pip install -e .` from the root directory (where `pyproject.toml` is located), these dependencies should already be installed as they are part of the main project dependencies. If not, ensure your environment has them. You can typically install all project dependencies by running:
+    ```bash
+    pip install .
+    ```
+    from the project root.
+
+## Running the Interface
+
+1.  **Start the Backend Server**:
+    Open your terminal, navigate to the project root, and run the Flask server:
+    ```bash
+    python browser_use/api/server.py
+    ```
+    You should see output indicating the server is running (e.g., on `http://127.0.0.1:5001`).
+
+2.  **Open the Frontend**:
+    *   Ensure you have a modern web browser installed.
+    *   Navigate to the `browser_interface` directory within this project.
+    *   Open the `index.html` file in your web browser (usually by double-clicking it or using `File > Open` in your browser).
+
+## Using the Interface
+
+*   The main chat area allows you to send commands to the AI agent.
+*   The "Browser Automation Preview" area on the side will display real-time updates and steps the AI agent is performing as it processes your command.
+
+This setup provides a more interactive way to see the agent's operations and receive immediate feedback.
 
 # Demos
 

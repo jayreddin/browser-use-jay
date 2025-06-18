@@ -61,6 +61,9 @@ body {
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    overflow-y: auto; /* Ensure scrollability */
+    display: flex; /* To help manage h2 and steps */
+    flex-direction: column; /* Stack h2 and steps vertically */
 }
 
 #automation-preview h2 {
@@ -68,4 +71,38 @@ body {
     margin-top: 0;
     font-size: 1.2em;
     color: #333;
+    flex-shrink: 0; /* Prevent h2 from shrinking */
+}
+
+.automation-step {
+    padding: 8px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    font-size: 0.9em;
+    word-wrap: break-word; /* Prevent long steps from overflowing horizontally */
+}
+
+/* Add some spacing for the first step after the h2 */
+#automation-preview h2 + .automation-step {
+    margin-top: 10px;
+}
+
+/* Styling for system messages in chat */
+.message.system-message {
+    font-style: italic;
+    color: #555;
+    font-size: 0.9em;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.message.system-error-message {
+    font-style: italic;
+    color: #d9534f; /* Bootstrap danger color */
+    font-size: 0.9em;
+    text-align: center;
+    margin: 5px 0;
+    font-weight: bold;
 }
