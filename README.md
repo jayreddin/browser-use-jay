@@ -86,6 +86,17 @@ pip install browser-use[cli]
 browser-use
 ```
 
+# Browser Interface
+
+This project now includes a browser-based interface for interacting with the AI agent.
+To use it:
+
+1.  Ensure you have a modern web browser installed.
+2.  Navigate to the `browser_interface` directory within this project.
+3.  Open the `index.html` file in your web browser.
+
+This will load the chat interface where you can send messages to the agent and see its responses, as well as a preview of browser automation tasks.
+
 # Demos
 
 <br/><br/>
