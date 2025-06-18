@@ -105,12 +105,13 @@ This project now includes a browser-based interface for interacting with the AI 
     ```bash
     python browser_use/api/server.py
     ```
-    You should see output indicating the server is running (e.g., on `http://127.0.0.1:5001`).
+    By default, this server starts on `http://127.0.0.1:5000`. You will see output in your terminal confirming this.
 
 2.  **Open the Frontend**:
     *   Ensure you have a modern web browser installed.
     *   Navigate to the `browser_interface` directory within this project.
     *   Open the `index.html` file in your web browser (usually by double-clicking it or using `File > Open` in your browser).
+    *   The frontend (`script.js`) is configured to connect to the backend server at `http://127.0.0.1:5000`.
 
 ## Using the Interface
 

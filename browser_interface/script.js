@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // The server URL will default to the host serving the page.
     // For local development, if Flask runs on 5001 and this page is opened from file system or different server,
     // you might need to specify: const socket = io('http://localhost:5001');
-    const socket = io(); // Connects to the server that serves the page, or specify URL
+    const socket = io('http://127.0.0.1:5000'); // Connects to the server that serves the page, or specify URL
 
     socket.on('connect', () => {
         console.log('Successfully connected to Socket.IO server!', socket.id);
